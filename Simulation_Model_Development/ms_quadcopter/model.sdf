@@ -1,0 +1,424 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="ms_quadcopter">
+    <static>false</static>
+
+    <link name="base">
+        <pose>0 0 .1 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.4 .4 .1</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.4 .4 .1</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>           
+
+    <link name="wing1">
+        <pose>.2 .2 .1 0 0 0.7854</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>   
+     
+    <link name="wing2">
+        <pose>-.2 .2 .1 0 0 -0.7854</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>       
+    
+    <link name="wing3">
+        <pose>.2 -.2 .1 0 0 -0.7854</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>       
+
+    <link name="wing4">
+        <pose>-.2 -.2 .1 0 0 0.7854</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.9 .05 .1</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>     
+     
+    <link name="motor1">
+        <pose>.5 .5 .15 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry> 
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </visual>
+    </link>
+     
+    <link name="motor2">
+        <pose>-.5 .5 .15 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry> 
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </visual>
+    </link>   
+     
+    <link name="motor3">
+        <pose>-.5 -.5 .15 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry> 
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </visual>
+    </link>
+    
+    <link name="motor4">
+        <pose>.5 -.5 .15 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry> 
+                <cylinder>
+                    <radius>.05</radius>
+                    <length>.2</length>
+                </cylinder>
+            </geometry>
+        </visual>
+    </link> 
+    
+    <link name="propeller1">
+        <pose>.5 .5 .225 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>     
+    
+    <link name="propeller2">
+        <pose>-.5 .5 .225 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>     
+
+    <link name="propeller3">
+        <pose>-.5 -.5 .225 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>     
+    
+
+     <link name="propeller4">
+        <pose>.5 -.5 .225 0 0 0</pose>
+
+        <collision name="collision">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </collision>
+ 
+        <visual name="visual">
+            <geometry>
+                <box>
+                    <size>.5 .05 .05</size>
+                </box>
+            </geometry>
+        </visual>
+    </link>    
+    
+    <joint type="revolute" name="w1">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>propeller1</child>
+        <parent>motor1</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+    </joint> 
+    
+    <joint type="revolute" name="w2">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>propeller2</child>
+        <parent>motor2</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+    </joint>
+     
+    <joint type="revolute" name="w3">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>propeller3</child>
+        <parent>motor3</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+     </joint>
+     
+     <joint type="revolute" name="w4">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>propeller4</child>
+        <parent>motor4</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="wm1">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>motor1</child>
+        <parent>wing1</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+
+     <joint type="revolute" name="wm2">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>motor2</child>
+        <parent>wing2</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="wm3">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>motor3</child>
+        <parent>wing3</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="wm4">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>motor4</child>
+        <parent>wing4</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="bw1">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>wing1</child>
+        <parent>base</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="bw2">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>wing2</child>
+        <parent>base</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="bw3">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>wing3</child>
+        <parent>base</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+    
+     <joint type="revolute" name="bw4">
+        <pose> 0 0 0 0 0 0</pose>
+        <child>wing4</child>
+        <parent>base</parent>
+        <axis>
+            <xyz>0 0 1</xyz>
+        
+            <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+            </limit>
+        </axis>
+     </joint>
+     
+</model>
+</sdf>
