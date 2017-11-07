@@ -11,7 +11,7 @@ l=0.23;
 Jr=6e-5;
 %% mass
 m=0.650;
-g=4;%9.81;
+g=9.81;
 %% aerodynamic force and moments constant
 kf=3.13e-5;
 km=7.5e-7;
@@ -39,26 +39,37 @@ K_mot=5.2; %Motor Torque Constant
 noise_rot=0;
 noise_trans=0;
 %% PID Constants
-ki_Z=.0001;
-kp_Z=20;
-kd_Z=15;
+ki_Z=90;
+kp_Z=130;
+kd_Z=150;
+
+ki_X=30;
+kp_X=60;
+kd_X=40;
+
+ki_Y=30;
+kp_Y=60;
+kd_Y=40;
+
 ki_Theta=0;
-kp_Theta=0;
-kd_Theta=0;
+kp_Theta=40;
+kd_Theta=10;
+
 ki_Phi=ki_Theta;
-kp_Phi=0;
-kd_Phi=0;
+kp_Phi=kp_Theta;
+kd_Phi=kd_Theta;
+
 ki_Psi=0;
-kp_Psi=0;
-kd_Psi=0;
+kp_Psi=10;
+kd_Psi=30;
 %% desired position
-X_d = 0;
-Y_d = 0;
-Z_d = 15;
+X_d = 1;
+Y_d = 1;
+Z_d = 1;
 %% desired orientation
-Phi_des = 0;
-Theta_des = 0;
-Psi_des = 0;
+Phi_des = 0.087;
+Theta_des = 0.087;
+Psi_des = 0.087;
 %% desired velocities and accelerations
 z_dot_d=0;
 phi_dot_d=0;
@@ -72,7 +83,7 @@ x_dot_d=0;
 y_dot_d=0;
 %% hover omega
 omega_hover=sqrt( (m*g)/(4*kf) );
-deltaU1_max=10;%kf*4*omega_hover^2;
+deltaU1_max=kf*4*omega_hover^2;
 deltaU2_max=kf*omega_hover^2;
 deltaU4_max=km*2*omega_hover^2;
 omega_max=(90*100)*9000*(2*pi/(60)); %90% of 9000 rpm to rad/s

@@ -1,0 +1,4 @@
+clear all;
+s = tf('s');
+
+plant = 26.1628/(s^2+14.)
