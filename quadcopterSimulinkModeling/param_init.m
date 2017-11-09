@@ -2,19 +2,19 @@ clear
 clc
 close all
 %% Ineria
-Ixx=7.5e-3;
-Iyy=7.5e-3;
-Izz=1.3e-2;
+Ixx=0.0086;%7.5e-3;
+Iyy=0.0086;%7.5e-3;
+Izz=0.0172;%1.3e-2;
 % axel length
-l=0.23;
+l=0.225;%0.23;
 %% rotor inertia
-Jr=6e-5;
+Jr=3.7404e-5;%6e-5;
 %% mass
-m=0.650;
+m=0.4794;%0.650;
 g=9.81;
 %% aerodynamic force and moments constant
 kf=3.13e-5;
-km=7.5e-7;
+km=9e-7;%7.5e-7;
 %% aerodynamic coefficients
 Krx=0;%0.1;
 Kry=0;%;0.1;
@@ -39,33 +39,33 @@ K_mot=5.2; %Motor Torque Constant
 noise_rot=0;
 noise_trans=0;
 %% PID Constants
-ki_Z=90;
-kp_Z=130;
-kd_Z=150;
+ki_Z=0;
+kp_Z=30;
+kd_Z=10;
 
-ki_X=30;
-kp_X=60;
-kd_X=40;
+ki_X=.1;
+kp_X=2;
+kd_X=.7;
 
-ki_Y=30;
-kp_Y=60;
-kd_Y=40;
+ki_Y=.1;
+kp_Y=2;
+kd_Y=.7;
 
-ki_Theta=0;
-kp_Theta=40;
-kd_Theta=10;
+ki_Theta=2.1756;
+kp_Theta=3.0239;
+kd_Theta=0.2022;
 
-ki_Phi=ki_Theta;
-kp_Phi=kp_Theta;
-kd_Phi=kd_Theta;
+ki_Phi=2.2310;
+kp_Phi=2.9996;
+kd_Phi=0.1969;
 
-ki_Psi=0;
-kp_Psi=10;
-kd_Psi=30;
+ki_Psi=1.8013;
+kp_Psi=2.479;
+kd_Psi=0.1528;
 %% desired position
 X_d = 1;
 Y_d = 1;
-Z_d = 1;
+Z_d = 2;
 %% desired orientation
 Phi_des = 0.087;
 Theta_des = 0.087;
