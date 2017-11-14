@@ -11,9 +11,9 @@ z_d = data.ans.signal4.Data;
 psi_d = data.ans.signal3.Data;
 
 
-phi = data.ans.signal5.Data;
-theta = data.ans.signal6.Data;
-psi = data.ans.signal7.Data;
+phi = data.ans.phi.Data;
+theta = data.ans.theta.Data;
+psi = data.ans.psi.Data;
 
 z = data.ans.z.Data;
 y = data.ans.y.Data;
