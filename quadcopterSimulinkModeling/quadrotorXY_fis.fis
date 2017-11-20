@@ -1,0 +1,50 @@
+[System]
+Name='quadrotorXY_fis'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='error_position'
+Range=[-1 1]
+NumMFs=7
+MF1='NLx':'gaussmf',[0.15 -1.004]
+MF2='NMx':'gaussmf',[0.15 -0.6667]
+MF3='NSx':'gaussmf',[0.15 -0.3334]
+MF4='Zx':'gaussmf',[0.15 0]
+MF5='PSx':'gaussmf',[0.15 0.3334]
+MF6='PMx':'gaussmf',[0.15 0.6667]
+MF7='PLx':'gaussmf',[0.15 1]
+
+[Input2]
+Name='error_rate'
+Range=[-1 1]
+NumMFs=7
+MF1='NMy':'gaussmf',[0.15 -0.6667]
+MF2='Zy':'gaussmf',[0.15 0]
+MF3='PMy':'gaussmf',[0.15 0.6667]
+MF4='NLy':'gaussmf',[0.15 -1]
+MF5='NSy':'gaussmf',[0.15 -0.3334]
+MF6='PSy':'gaussmf',[0.15 0.3334]
+MF7='PLy':'gaussmf',[0.15 1]
+
+[Output1]
+Name='output_angle'
+Range=[-1 1]
+NumMFs=7
+MF1='NL':'trimf',[-1.3333 -1 -0.6667]
+MF2='Z':'trimf',[-0.3333 0 0.3333]
+MF3='PM':'trimf',[0.3333 0.6667 1]
+MF4='NM':'trimf',[-1 -0.6667 -0.3333]
+MF5='NS':'trimf',[-0.6667 -0.3333 0]
+MF6='PS':'trimf',[0 0.3333 0.6667]
+MF7='PL':'trimf',[0.6667 1 1.3333]
+
+[Rules]
